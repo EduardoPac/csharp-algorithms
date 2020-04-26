@@ -3,9 +3,9 @@ using Xunit;
 
 namespace Algorithms.Challenges
 {
+    #region Enunciated
+
     /*
-    Enunciado 
-    
     Leia 2 valores inteiros e armazene-os nas variáveis A e B. Efetue a soma de A e B atribuindo o seu 
     resultado a outra variável. 
     
@@ -15,7 +15,9 @@ namespace Algorithms.Challenges
     Saída
     - Soma dos dois numeros inteiros
     */
-    
+
+    #endregion
+
     public class SumTwoNumbersTest
     {
         [Theory]
@@ -27,7 +29,7 @@ namespace Algorithms.Challenges
             var result = Sum(a, b);
             result.Should().Be(expected);
         }
-        
-        private static int Sum(int numA, int numB) => numA + numB;
+
+        private static int Sum(in int a, in int b) => a + b;
     }
 }
