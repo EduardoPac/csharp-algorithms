@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: 3.1.101 
     - name: Install dependencies
-      working-directory: src/Algorithms
+      working-directory: Algorithms
       run: dotnet restore
     - name: Build
-      working-directory: src/Algorithms
+      working-directory: Algorithms
       run: dotnet build --configuration Release --no-restore
     - name: Test
-      working-directory: src/Algorithms
+      working-directory: Algorithms
       run: dotnet test --no-restore --verbosity normal
